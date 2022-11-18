@@ -24,7 +24,7 @@ def upload():
         x=np.expand_dims(x,axis=0)
         pred=np.argmax(model.predict(x),axis=1)
         index=['Pepper,_bell___Bacterial_spot','Pepper,_bell___healthy','Potato___Early_blight','Potato___healthy','Potato___Late_blight','Tomato___Bacterial_spot','Tomato___Late_blight','Tomato___Leaf_Mold','Tomato___Septoria_leaf_spot']
-        text="Treatment: " +str(index[pred[0]])
+        text="Treatment: " +str(index[pred[0]]+"      " + "    -Copper sprays can be used to control bacterial leaf spot, but they are not as effective when used alone on a continuous basis. Thus, combining these sprays with a plant resistance inducer, such as Regalia or Actigard, can provide good protection from the disease.")
     return text
 if __name__=='__main__':
     app.run(debug=False)
