@@ -24,7 +24,7 @@ def upload():
         x=np.expand_dims(x,axis=0)
         pred=np.argmax(model.predict(x),axis=1)
         index=['Apple__Black_rot','Apple__healthy','Corn_(maize)__Healthy','Corn_(maize)__Northern_Leaf','Peach__Bacterial_spot','Peach__healthy']
-        text="Treatment: " +str(index[pred[0]])
+        text="Treatment: " +str(index[pred[0]]+"  "+"Captan and sulfur products are labeled for control of both scab and black rot. A scab spray program including these chemicals may help prevent the frog-eye leaf spot of black rot, as well as the infection of fruit.")
     return text
 if __name__=='__main__':
     app.run(debug=False)
